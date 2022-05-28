@@ -13,6 +13,14 @@ dt = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
 
 # page config
 st.set_page_config(page_title='Data Visualization App', page_icon=':bar_chart:', layout="wide")
+hide_data = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_data, unsafe_allow_html=True)
 
 plot_options = ['scatter', 'line', 'area', 'bar', 'funnel', 'timeline', 'pie', 'sunburst', 'treemap', 'icicle', 'funnel_area', 'histogram', 'box', 'violin', 'strip', 'ecdf', 'density_heatmap', 'density_contour', 'scatter_3d', 'line_3d', 'scatter_matrix', 'parallel_coordinates', 'parallel_categories', 'scatter_mapbox', 'line_mapbox', 'choropleth_mapbox', 'density_mapbox', 'scatter_geo', 'line_geo', 'choropleth', 'scatter_polar', 'line_polar', 'bar_polar', 'scatter_ternary', 'line_ternary']
 
